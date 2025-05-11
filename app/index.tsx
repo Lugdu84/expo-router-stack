@@ -6,14 +6,15 @@ export default function Index() {
 	const [count, setCount] = useState(0);
 	return (
 		<View style={styles.container}>
-			<Stack.Screen
+			{/* <Stack.Screen
 				options={{
+					headerShown: true,
 					headerStyle: {
 						backgroundColor: 'blue',
 					},
 					title: `Expo Router : Stack`,
 				}}
-			/>
+			/> */}
 			<Text>Leçon sur Expo Router : Stack</Text>
 			<Link
 				href={'/counter'}

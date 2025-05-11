@@ -33,11 +33,12 @@ export default function CounterScreen() {
 		<View style={styles.container}>
 			<Stack.Screen
 				options={{
-					title: 'Counter',
+					title: 'Counter' + getName(),
 					headerStyle: {
 						backgroundColor: 'white',
 					},
 					headerTintColor: 'black',
+					// headerBackVisible: false,
 					headerLeft: () => (
 						<Pressable onPress={() => router.back()}>
 							<AntDesign
