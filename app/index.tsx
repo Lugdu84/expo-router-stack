@@ -6,7 +6,7 @@ export default function Index() {
 	const [count, setCount] = useState(0);
 	return (
 		<View style={styles.container}>
-			{/* <Stack.Screen
+			<Stack.Screen
 				options={{
 					headerShown: true,
 					headerStyle: {
@@ -14,7 +14,7 @@ export default function Index() {
 					},
 					title: `Expo Router : Stack`,
 				}}
-			/> */}
+			/>
 			<Link
 				href={'/counter'}
 				asChild>
