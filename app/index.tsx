@@ -15,7 +15,6 @@ export default function Index() {
 					title: `Expo Router : Stack`,
 				}}
 			/> */}
-			<Text>Leçon sur Expo Router : Stack</Text>
 			<Link
 				href={'/counter'}
 				asChild>
