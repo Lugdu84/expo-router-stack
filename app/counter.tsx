@@ -33,7 +33,7 @@ export default function CounterScreen() {
 		<View style={styles.container}>
 			<Stack.Screen
 				options={{
-					title: 'Counter' + getName(),
+					title: 'Counter' + getName() + ' : ' + count,
 					headerStyle: {
 						backgroundColor: 'white',
 					},
