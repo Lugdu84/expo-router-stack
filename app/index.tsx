@@ -28,6 +28,11 @@ export default function Index() {
 				asChild>
 				<Button title="counter with name" />
 			</Link>
+			<Link
+				href={'/search'}
+				asChild>
+				<Button title="search" />
+			</Link>
 		</View>
 	);
 }
