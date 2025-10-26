@@ -52,6 +52,8 @@ export default function SearchScreen() {
 		language.name.toLowerCase().includes(searchText)
 	);
 
+	console.log('filteredLanguages', filteredLanguages);
+
 	return (
 		<View
 			style={[
@@ -60,30 +62,7 @@ export default function SearchScreen() {
 			]}>
 			<Stack.Screen
 				options={{
-					headerSearchBarOptions: {
-						// seulement pour android
-						autoCapitalize: 'none',
-						// inputType: 'number',
-
-						// seuleemnt pour iOS
-						// cancelButtonText: 'Annuler',
-
-						ref: refSearch,
-						placeholder: 'filtrer des langages',
-						onChangeText(e) {
-							console.log('onChangeText', e.nativeEvent.text);
-							handleChangeText(e.nativeEvent.text);
-						},
-						onSearchButtonPress(e) {
-							console.log('onSearchButtonPress', e.nativeEvent.text);
-							// Implémenter la logique de recherche ici ...
-							refSearch.current.clearText();
-						},
-						onCancelButtonPress() {
-							console.log('cancel ...');
-							handleChangeText('');
-						},
-					},
+					headerSearchBarOptions: {},
 				}}
 			/>
 			<FlatList
