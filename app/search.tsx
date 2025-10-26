@@ -53,6 +53,7 @@ export default function SearchScreen() {
 	);
 
 	console.log('filteredLanguages', filteredLanguages);
+	console.log('searchText state:', searchText);
 
 	return (
 		<View
@@ -62,7 +63,22 @@ export default function SearchScreen() {
 			]}>
 			<Stack.Screen
 				options={{
-					headerSearchBarOptions: {},
+					headerSearchBarOptions: {
+						ref: refSearch,
+						onChangeText(e) {
+							console.log('onChangeText', e.nativeEvent.text);
+							handleChangeText(e.nativeEvent.text.toLowerCase());
+						},
+						onSearchButtonPress(e) {
+							console.log('onSearchButtonPress', e.nativeEvent.text);
+							// Implémenter la logique de recherche ici ...
+							refSearch.current.clearText();
+						},
+						onCancelButtonPress() {
+							console.log('cancel ...');
+							handleChangeText('');
+						},
+					},
 				}}
 			/>
 			<FlatList
