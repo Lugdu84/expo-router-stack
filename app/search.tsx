@@ -73,6 +73,7 @@ export default function SearchScreen() {
 							console.log('onSearchButtonPress', e.nativeEvent.text);
 							// Implémenter la logique de recherche ici ...
 							refSearch.current.clearText();
+							handleChangeText('');
 						},
 						onCancelButtonPress() {
 							console.log('cancel ...');
